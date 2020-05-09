@@ -1,0 +1,39 @@
+Admissions	
+	admissionId, fName, mName, lName, DOB, admissionInClass, fatherName, fatherCNIC, fatherOccupation, dateOfAdmission, startMonth, tuitionFees, admissionFees, 	securityfees, picture, address, phoneNo1, phoneNo2, bayFormPicture, BirthCertificatePicture, fatherCNICPicture
+
+
+
+Student
+	studentId, admissionId, Class, ActiveStatus
+
+
+studentPayments
+	studentpaymentId, studentId, title, amount, paymentStatus, paidAmount, appliedOn, paidOn
+
+
+
+Fees
+	feeId, studentId, feemonth, feeYear, paymentStatus, paidOn 
+
+
+
+Result
+	resultId, studentId, term, year, Class, resultDate, total, Obtained, passStatus, position, remarks
+
+Papers
+	paperId, studentId, term, paperyear, class, subjectId, type(written, oral, practical), paperDate, total, obtained, passStatus, remarks
+
+Test
+	testId, studentId, subjectId, class, type(written, oral, practical), totalMarks, obtained, remarks 
+
+
+Subjects
+	subjectId, subjectTitle, Class
+
+
+ThingsForSale
+	thingsId, name, price 
+
+
+LeavingStudent
+	studentId, LastMonth, year, Reason, DueAmount, leavingDate

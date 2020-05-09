@@ -1,0 +1,147 @@
+-- Creating database educative_db
+
+Create database educative_db;
+use educative_db;
+
+
+
+CREATE USER 'educative_user'@'localhost' IDENTIFIED BY 'educative_user';
+
+-- for laravel
+ALTER USER 'educative_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'educative_user';
+
+CREATE TABLE `admissions` (
+  `admissionId` int NOT NULL AUTO_INCREMENT,
+  `fName` varchar(255) NOT NULL,
+  `mName` varchar(255) DEFAULT NULL,
+  `lName` varchar(255) NOT NULL,
+  `dob` date DEFAULT NULL,
+  `admissionInClass` varchar(255) DEFAULT NULL,
+  `fatherName` varchar(255) DEFAULT NULL,
+  `fatherCnic` varchar(255) DEFAULT NULL,
+  `fatherOccupation` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `phoneNo1` varchar(255) DEFAULT NULL,
+  `phoneNo2` varchar(255) DEFAULT NULL,
+  `DateOfAdmission` date DEFAULT NULL,
+  `startMonth` varchar(255) DEFAULT NULL,
+  `admissionFees` int DEFAULT NULL,
+  `tuitionFees` int DEFAULT NULL,
+  `securityFees` int DEFAULT NULL,
+  `studentPic` blob,
+  `bayFormPic` blob,
+  `birthCertificatePic` blob,
+  `fatherCnicPic` blob,
+  PRIMARY KEY (`admissionId`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `fees` (
+  `feeId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `feeMonth` varchar(255) DEFAULT NULL,
+  `feeYear` varchar(255) DEFAULT NULL,
+  `paidAmount` int DEFAULT NULL,
+  `paidOn` date DEFAULT NULL,
+  `paymentStatus` char(1) DEFAULT NULL,
+  `feesAmount` int DEFAULT NULL,
+  PRIMARY KEY (`feeId`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `oldstudents` (
+  `oldStudentId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `lastMonth` varchar(255) DEFAULT NULL,
+  `lastyear` varchar(255) DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `dueAmount` varchar(255) DEFAULT NULL,
+  `leavingDate` date DEFAULT NULL,
+  PRIMARY KEY (`oldStudentId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `papers` (
+  `paperId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `term` varchar(255) DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL,
+  `subjectId` varchar(255) DEFAULT NULL,
+  `paperType` varchar(255) DEFAULT NULL,
+  `paperDate` date DEFAULT NULL,
+  `totalMarks` int DEFAULT NULL,
+  `obtainedMarks` int DEFAULT NULL,
+  `passStatus` tinyint(1) DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `passingMarks` int DEFAULT NULL,
+  PRIMARY KEY (`paperId`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `products` (
+  `productId` int NOT NULL AUTO_INCREMENT,
+  `productName` varchar(255) DEFAULT NULL,
+  `productPrice` int DEFAULT NULL,
+  PRIMARY KEY (`productId`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `results` (
+  `resultId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `term` varchar(255) DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL,
+  `resultDate` date DEFAULT NULL,
+  `totalMarks` int DEFAULT NULL,
+  `obtainedMarks` int DEFAULT NULL,
+  `passStatus` tinyint(1) DEFAULT NULL,
+  `position` int DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `totalAttendanceDays` int DEFAULT NULL,
+  `attendedDays` int DEFAULT NULL,
+  `neatnessMarks` int DEFAULT NULL,
+  `behaviourMarks` int DEFAULT NULL,
+  `percentage` double DEFAULT NULL,
+  `grade` char(1) DEFAULT NULL,
+  `passingMarks` int DEFAULT NULL,
+  PRIMARY KEY (`resultId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `studentpayments` (
+  `studentPaymentId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `unitPrice` int DEFAULT NULL,
+  `appliedOn` date DEFAULT NULL,
+  `paidAmount` int DEFAULT NULL,
+  `paidOn` date DEFAULT NULL,
+  `paymentStatus` char(1) DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  PRIMARY KEY (`studentPaymentId`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `students` (
+  `studentId` int NOT NULL AUTO_INCREMENT,
+  `admissionId` int DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL,
+  `activeStatus` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`studentId`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `subjects` (
+  `subjectId` int NOT NULL AUTO_INCREMENT,
+  `subjectTitle` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`subjectId`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `tests` (
+  `testId` int NOT NULL AUTO_INCREMENT,
+  `studentId` int DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL,
+  `subjectId` varchar(255) DEFAULT NULL,
+  `testType` varchar(255) DEFAULT NULL,
+  `testDate` date DEFAULT NULL,
+  `totalMarks` int DEFAULT NULL,
+  `obtainedMarks` int DEFAULT NULL,
+  `passStatus` tinyint(1) DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `term` varchar(45) DEFAULT NULL,
+  `passingMarks` int DEFAULT NULL,
+  PRIMARY KEY (`testId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
