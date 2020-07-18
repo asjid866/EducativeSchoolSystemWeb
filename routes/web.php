@@ -84,3 +84,8 @@ Route::get('/admin-viewResult', 'ExamController@viewResult');
 
 
 
+
+
+// Additional Api's
+Route::get('/asjid866/api/combncut/sendnewbookedemailtoadmin', 'Asjid866\CombnCut\SendEmailController@sendNewBookedEmailToAdmin');
+

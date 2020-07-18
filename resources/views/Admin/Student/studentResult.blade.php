@@ -108,7 +108,7 @@
                         <td style="border-color: transparent;"><h4><strong>Position in Class: &nbsp; {{ $studentResult->position }} </strong> </h4></td>
                     </tr>
                     <tr>
-                        <td style="border-color: transparent;"><h4><strong>Attendance: &nbsp; {{ $studentResult->attendedDays }} &nbsp; / &nbsp; {{ $studentResult->totalAttendanceDays }} </strong> </h4></td>
+                        <td style="border-color: transparent;"><h4><strong>Attendance: &nbsp; {{ ($studentResult->attendedDays  /  $studentResult->totalAttendanceDays) * 100 }} %   </strong> </h4></td>
                         <td style="border-color: transparent;"><h4><strong>Neatness: &nbsp; {{ $studentResult->neatnessMarks }} / 10</strong> </h4></td>
                         <td style="border-color: transparent;"><h4><strong>Behaviour: &nbsp; {{ $studentResult->behaviourMarks }} / 10</strong> </h4></td>
                     </tr>

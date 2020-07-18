@@ -13,14 +13,16 @@
 
 
     <!-- banner part start-->
-    <section class="banner_part" style="height: 550px; background-color: white">
+    <section class="banner_part" style="height: 400px; background-color: white">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-xl-6">
-                    <div class="banner_text">
-                        <div class="banner_text_iner">
-                            <h1>EDUCATIVE SCHOOL SYSTEM</h1> <h2><sup class="fa-align-right">(Registered)</sup></h2>
-                            <p>Moving male there under air air beast lesser creeping saying wherein two void can' ness saw set meat our. Whose give day. Morning own fifth from Were moved darkness. Female bring abundantly and research  </p>
+                <div class="col-lg-5 col-xl-5">
+                    <div>
+                        <div>
+                            <p style="text-align: left; text-shadow: 2px 2px 5px #12227F; font: italic small-caps bold 80px/90px Courier, sans-serif;">
+                                EDUCATIVE SCHOOL SYSTEM</p>
+                            <p style="text-align: right; text-shadow: 1px 1px 1px #12227F; font: italic small-caps bold 30px/40px Courier, sans-serif;">(Registered)</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +32,7 @@
     <!-- banner part start-->
 
     <!-- about part start-->
-    <section class="about_part section_padding">
+    <section class="about_part">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 col-lg-6">
@@ -42,17 +44,16 @@
                     <div class="about_part_text">
                         <h2>A Step Towards Your
                             Dreams With Us</h2>
-                        <p>Which cattle fruitful he fly visi won't let above lesser stars. Fly form wonder every let third form two air seas after us said day won light also  together midst two female she great to open.</p>
                         <ul>
                             <li>
                                 <span class="flaticon-drop"></span>
-                                <h3>English Medium</h3>
-                                <p>Be man air male shall under create light together grass fly dat also also his brought itself air abundantly </p>
+                                <h3>* English Medium</h3>
+                                {{--<p>Be man air male shall under create light together grass fly dat also also his brought itself air abundantly </p>--}}
                             </li>
                             <li>
                                 <span class="flaticon-ui"></span>
-                                <h3>Registered And Affiliated with Punjab Board</h3>
-                                <p>Be man air male shall under create light together grass fly do also also his brought itself air abundantly </p>
+                                <h3>* Registered And Affiliated with Punjab Board</h3>
+                                {{--<p>Be man air male shall under create light together grass fly do also also his brought itself air abundantly </p>--}}
                             </li>
                         </ul>
                     </div>
@@ -80,7 +81,7 @@
                             <h4>Better Future</h4>
                             <p>Set have great you male grasses yielding yielding first their to
                                 called deep abundantly Set have great you male</p>
-                            <a href="#" class="btn_3">read more</a>
+                            {{--<a href="#" class="btn_3">read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
                             <h4>Qualified Teachers</h4>
                             <p>Set have great you male grasses yielding yielding first their to called
                                 deep abundantly Set have great you male</p>
-                            <a href="#" class="btn_3">read more</a>
+                            {{--<a href="#" class="btn_3">read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -102,7 +103,7 @@
                             <h4>Extracurricular Activities</h4>
                             <p>Set have great you male grasses yielding yielding first their to called deep
                                 abundantly Set have great you male</p>
-                            <a href="#" class="btn_3">read more</a>
+                            {{--<a href="#" class="btn_3">read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -112,14 +113,14 @@
     <!-- our_service part end-->
 
     <!-- about part start-->
-    <section class="about_part experiance_part section_padding">
+    <section class="about_part experiance_part ">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 col-lg-6">
                     <div class="about_part_text">
                         <h2>We Are Experience
                                 in Grooming</h2>
-                        <p>Their whose made waters there our, air above first give dry fruit that second whose herb creeping it us light spirit appear mans. So green abundantly She'd. Greater divide dry bearing years ourends herb upon which open lights had blessed replenish Cattle give his. Abundantly over saying which beast dominion multiply behold to wateo.</p>
+                        {{--<p>Their whose made waters there our, air above first give dry fruit that second whose herb creeping it us light spirit appear mans. So green abundantly She'd. Greater divide dry bearing years ourends herb upon which open lights had blessed replenish Cattle give his. Abundantly over saying which beast dominion multiply behold to wateo.</p>--}}
                         <div class="about_text_iner">
                             <div class="about_text_counter">
                                 <h2>18</h2>
@@ -295,70 +296,72 @@
     {{--<!-- review part end-->--}}
 
     <!--::blog_part start::-->
-    <section class="blog_part section_padding">
-        <div class="container">
-            <div class="row ">
-                <div class="col-xl-5">
-                    <div class="section_tittle ">
-                        <h2>Recent news</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-4 col-xl-4">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="theme/img/blog/blog_1.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <ul>
-                                    <li> <span class="ti-comments"></span>2 Comments</li>
-                                    <li> <span class="ti-heart"></span>2k Like</li>
-                                </ul>
-                                <a href="blog.html">
-                                    <h5 class="card-title">Our two firmament called us kind in face midst</h5>
-                                </a>
-                                <a href="#" class="btn_3">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="theme/img/blog/blog_2.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <ul>
-                                    <li> <span class="ti-comments"></span>2 Comments</li>
-                                    <li> <span class="ti-heart"></span>2k Like</li>
-                                </ul>
-                                <a href="blog.html">
-                                    <h5 class="card-title">Our two firmament called us kind in face midst</h5>
-                                </a>
-                                <a href="#" class="btn_3">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-4">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="theme/img/blog/blog_3.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <ul>
-                                    <li> <span class="ti-comments"></span>2 Comments</li>
-                                    <li> <span class="ti-heart"></span>2k Like</li>
-                                </ul>
-                                <a href="blog.html">
-                                    <h5 class="card-title">Our two firmament called us kind in face midst</h5>
-                                </a>
-                                <a href="#" class="btn_3">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    {{--<section class="blog_part section_padding">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row ">--}}
+                {{--<div class="col-xl-5">--}}
+                    {{--<div class="section_tittle ">--}}
+                        {{--<h2>Recent news</h2>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-sm-6 col-lg-4 col-xl-4">--}}
+                    {{--<div class="single-home-blog">--}}
+                        {{--<div class="card">--}}
+                            {{--<img src="theme/img/blog/blog_1.png" class="card-img-top" alt="blog">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<ul>--}}
+                                    {{--<li> <span class="ti-comments"></span>2 Comments</li>--}}
+                                    {{--<li> <span class="ti-heart"></span>2k Like</li>--}}
+                                {{--</ul>--}}
+                                {{--<a href="blog.html">--}}
+                                    {{--<h5 class="card-title">Our two firmament called us kind in face midst</h5>--}}
+                                {{--</a>--}}
+                                {{--<a href="#" class="btn_3">read more</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-6 col-lg-4 col-xl-4">--}}
+                    {{--<div class="single-home-blog">--}}
+                        {{--<div class="card">--}}
+                            {{--<img src="theme/img/blog/blog_2.png" class="card-img-top" alt="blog">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<ul>--}}
+                                    {{--<li> <span class="ti-comments"></span>2 Comments</li>--}}
+                                    {{--<li> <span class="ti-heart"></span>2k Like</li>--}}
+                                {{--</ul>--}}
+                                {{--<a href="blog.html">--}}
+                                    {{--<h5 class="card-title">Our two firmament called us kind in face midst</h5>--}}
+                                {{--</a>--}}
+                                {{--<a href="#" class="btn_3">read more</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-6 col-lg-4 col-xl-4">--}}
+                    {{--<div class="single-home-blog">--}}
+                        {{--<div class="card">--}}
+                            {{--<img src="theme/img/blog/blog_3.png" class="card-img-top" alt="blog">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<ul>--}}
+                                    {{--<li> <span class="ti-comments"></span>2 Comments</li>--}}
+                                    {{--<li> <span class="ti-heart"></span>2k Like</li>--}}
+                                {{--</ul>--}}
+                                {{--<a href="blog.html">--}}
+                                    {{--<h5 class="card-title">Our two firmament called us kind in face midst</h5>--}}
+                                {{--</a>--}}
+                                {{--<a href="#" class="btn_3">read more</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
+
     <!--::blog_part end::-->
 
 </div>

@@ -209,6 +209,7 @@ class ExamController extends BaseController
                 $result = null;
             }
         }
+//        dump($netTotal);die;
         $netPercentage = number_format((float)($netObtained / $netTotal)*100, 2, '.', '');
         if ($netPercentage < 50){
             $netPassStatus = 0;
@@ -326,6 +327,7 @@ class ExamController extends BaseController
                 $result = null;
             }
         }
+//        dump($netTotal);die;
         $netPercentage = number_format((float)($netObtained / $netTotal)*100, 2, '.', '');
         if ($netPercentage < 50){
             $netPassStatus = "Fail";
@@ -342,33 +344,38 @@ class ExamController extends BaseController
 //     ajec call
     function getStudentAndMarksByClass(Request $request){
 
-        $class = $request->get('class');
-        $term = $request->get('term');
-        $examType = $request->get('examType');
-        $subject = $request->get('subject');
-        $paperType = $request->get('paperType');
-        $year = $request->get('year');
 
-        $admissionDetails = DB::table('admissions')->orderBy('fName','ASC')->get();
-        $students = DB::table('students')->where(['class'=>$class , 'activeStatus'=>'1'])->get();
-        $studentDetails = [];
 
-        foreach ($admissionDetails as $admissionDetail){
-            foreach ($students as $student){
-                if ($admissionDetail->admissionId == $student->admissionId){
-                    $admissionDetail->{'studentId'} = $student->studentId;
-                    if ($examType == "Paper"){
-                        $studentMark = DB::table('papers')->where(['studentId'=>$student->studentId, 'class'=>$class,
-                            'term' => $term, 'subjectId'=>$subject, 'paperType'=>$paperType])->whereYear('paperDate' , '=', date($year))->first();
-                        if ($studentMark != null){
-                            $admissionDetail->{'studentMark'} = $studentMark;
-                        }
-                    }
-                    array_push($studentDetails,$admissionDetail);
-                }
-            }
-        }
-        return response()->json($studentDetails, 200);
+        dump("email sent");die;
+
+
+//        $class = $request->get('class');
+//        $term = $request->get('term');
+//        $examType = $request->get('examType');
+//        $subject = $request->get('subject');
+//        $paperType = $request->get('paperType');
+//        $year = $request->get('year');
+//
+//        $admissionDetails = DB::table('admissions')->orderBy('fName','ASC')->get();
+//        $students = DB::table('students')->where(['class'=>$class , 'activeStatus'=>'1'])->get();
+//        $studentDetails = [];
+//
+//        foreach ($admissionDetails as $admissionDetail){
+//            foreach ($students as $student){
+//                if ($admissionDetail->admissionId == $student->admissionId){
+//                    $admissionDetail->{'studentId'} = $student->studentId;
+//                    if ($examType == "Paper"){
+//                        $studentMark = DB::table('papers')->where(['studentId'=>$student->studentId, 'class'=>$class,
+//                            'term' => $term, 'subjectId'=>$subject, 'paperType'=>$paperType])->whereYear('paperDate' , '=', date($year))->first();
+//                        if ($studentMark != null){
+//                            $admissionDetail->{'studentMark'} = $studentMark;
+//                        }
+//                    }
+//                    array_push($studentDetails,$admissionDetail);
+//                }
+//            }
+//        }
+//        return response()->json($studentDetails, 200);
 
         //        $students = DB::table('students')->where(['class'=>$class , 'activeStatus'=>'1'])->get();
 //        $studentDetails = [];
